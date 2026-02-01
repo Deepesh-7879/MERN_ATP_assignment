@@ -1,0 +1,57 @@
+###Read all users
+GET http://localhost:3000/user-api/users
+
+###create user
+POST http://localhost:3000/user-api/users
+Content-Type: application/json
+
+{
+    "username":"deepe",
+    "password":"jxbxy",
+    "age":22
+}
+
+
+###Read user by id
+GET  http://localhost:3000/user-api/users/697dbd2c647fc37bc6058ac1
+
+
+###Update user
+PUT  http://localhost:3000/user-api/users/697dbd2c647fc37bc6058ac1
+Content-Type: application/json
+
+{
+    "username":"deepe",
+    "password":"jxbxy",
+    "age":27
+}
+
+###Delete user
+DELETE http://localhost:3000/user-api/users/697dbd2c647fc37bc6058ac1
+
+
+###Read product list
+GET http://localhost:3000/product-api/products
+
+###Create product list
+POST  http://localhost:3000/product-api/products
+Content-Type: application/json
+
+{
+    "pid":202,
+    "productName":"car",
+    "price":7000
+}
+
+###get by id
+GET  http://localhost:3000/product-api/products/697dd368aa4b20e194917c0f
+
+###update product by id
+PUT http://localhost:3000/product-api/products/697dd368aa4b20e194917c0f
+Content-Type: application/json
+
+{
+    "pid":201,
+    "productName":"laptop",
+    "price":75000
+}
