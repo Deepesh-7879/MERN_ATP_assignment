@@ -1,0 +1,120 @@
+###User Register
+POST  http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "firstName":"Deepesh",
+    "lastName":"Ajay",
+    "email":"deepesh@gmail.com",
+    "password":"ajay@212",
+    "profileImageUrl":"https://www.istockphoto.com/photos/for-example"
+}
+
+### login user
+POST http://localhost:4000/common-api/login
+Content-Type: application/json
+
+{
+    "email":"deepesh@gmail.com",
+    "password":"ajay@212"
+
+}
+
+
+
+###author register 
+POST http://localhost:4000/author-api/users
+Content-Type: application/json
+
+{
+    "firstName":"charan",
+    "lastName":"siddu",
+    "email":"charan@gmail.com",
+    "password":"siddu@1234",
+    "profileImageUrl":"https://www.istockphoto.com/photos/for-example"
+}
+
+
+### login author
+POST http://localhost:4000/common-api/login
+Content-Type: application/json
+
+{
+    "email":"vikas@gmail.com",
+    "password":"user@1234"
+    
+}
+
+###Create Article
+POST http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "author":"698998a850c5a009a6e6e5ad",
+    "title":"test5 article",
+    "category":" python programming",
+    "content":"content of python"
+
+}
+
+###Read article of author
+GET http://localhost:4000/author-api/articles/69896e019ea6734a70853c02
+
+###Read all articles
+GET http://localhost:4000/user-api/articles
+
+###Add comments
+PUT http://localhost:4000/user-api/users/698968b6b28f2f24d293c77c/article/6989aedd73c0466e2fb07640
+Content-Type: application/json
+
+{
+    "comment":"its nice book"
+}
+
+
+
+
+###Edit article
+PUT  http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "author":"69896e019ea6734a70853c02",
+    "articleId":"6989981d50c5a009a6e6e5a8",
+    "title":"test4 article",
+    "category":"java programming",
+    "content":"content of core java"
+
+}
+
+###delete article(soft delete)
+DELETE http://localhost:4000/author-api/articles/author/69896e019ea6734a70853c02/article/69897689172beef5e4ebf045
+
+
+###Logout
+POST http://localhost:4000/common-api/logout
+
+###Test 
+GET http://localhost:4000/test
+
+------------------------------------------------------------
+###Read all articles from admin site
+GET http://localhost:4000/admin-api/articles
+
+
+###Block user from admin site
+PUT http://localhost:4000/admin-api/users-block/69896e019ea6734a70853c02
+
+###UnBlock user from admin site
+PUT http://localhost:4000/admin-api/users-unblock/69896e019ea6734a70853c02
+
+
+###Change password
+PUT http://localhost:4000/common-api/change-password/69896e019ea6734a70853c02
+Content-Type: application/json
+
+{
+    "oldPassword":"deepesh",
+    "newPassword":"deepesh12"
+}
+

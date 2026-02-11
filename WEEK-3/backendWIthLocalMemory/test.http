@@ -1,0 +1,67 @@
+GET http://localhost:3000/user-api/users
+
+###
+POST  http://127.0.0.1:3000/user-api/users
+Content-Type: application/json
+
+{
+    "id":202,
+    "name":"ajay",
+    "age":19
+}
+
+
+###
+PUT  http://127.0.0.1:3000/user-api/users/id
+Content-Type: application/json
+
+{
+    "id":202,
+    "name":"deepesh ajay",
+    "age":22
+}
+
+###Read a user by id
+GET http://localhost:3000/user-api/users/202
+
+###
+DELETE  http://127.0.0.1:3000/user-api/users/200
+
+
+###
+GET http://localhost:3000/product-api/products
+
+###
+POST http://localhost:3000/product-api/products
+Content-Type: application/json
+
+{
+    "productId":302,
+    "name":"car",
+    "price":4000,
+    "brand":"BMW"
+}
+
+
+###
+PUT http://localhost:3000/product-api/products/300
+Content-Type: application/json
+
+{
+    "productId":301,
+    "name":"car",
+    "price":5000,
+    "brand":"mercedes"
+}
+
+
+###
+GET http://localhost:3000/product-api/products/301
+
+
+###
+GET http://localhost:3000/product-api/products-name/car
+
+###
+DELETE http://localhost:3000/product-api/products/302
+
